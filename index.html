@@ -1,75 +1,111 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Jeffrey Wang Portfolio</title>
+        <title>Jeffrey Wang's Portfolio</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script src="src="https://code.jquery.com/jquery-3.5.1.min.js""></script>
     </head>
+    
     <body>
-        <header>
-            <div class="jw-logo">
-             <img src="....." alt="Jeffrey Wang Logo">
-            </div>
-            <div>
-                <nav class="nav-menu">
-                    <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Work</li>
-                        <li>Contact</li>
+            <nav class="navbar">
+                <div class="max-width">
+                    <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
+                
+                    <ul class="menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Skills</a></li>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
-                </nav>
+                </div>
+            </nav>
+        <section class="home" id="home">
+            <div class="max-width">
+                <div class="home-content">
+                    <div class="text-1">Hello, my name is</div>
+                    <div class="text-2">Jeffrey Wang</div>
+                    <div class="text-3">I am a <span>UX/UI Designer.</span></div>
+                </div>
             </div>
-            <div id="portfolio">
-                <p>Portfolio</p>
+        </section>
+
+        <section class="about" id="about">
+            <div class="max-width">
+                <h2 class="title">About Me</h2>
+                <div class="about-content">
+                    <div class="column left">
+                        <img src="images/Fetch.png" alt="">
+                    </div>
+                    <div class="column right">
+                        <div class="text">I'm Jeff and i'm a <span class="ux">UX/UI Designer</span></div>
+                        <p>I am a motivated UX/UI Design professional and problem solver with a background in UX/UI Design and Communications major with an empasis on Media Studies from Central Connecticut State University. Experience with verbal and written communication, strong team skills, and leadership. Recently earned my Certification in UX/UI Design from the University of Arizona.</p>
+                        <a href="#">Download Resume</a>
+                        <a href="#">Download CV</a>
+                    </div>
+                </div>
             </div>
-        </header>
-        <section class="bodyText">
+        </section>
+        <section class="skills" id="skills">
+            <div class="max-width">
+                <h2 class="title">My skills</h2>
+                <div class="skills-content">
+                    <div class="column">
+                        <div class="textleft">My creative skills & experience.
+                            <p>My skills include: User Interface, User Experience, UX Strategy, Interaction Design, Wire framing, Prototyping, Design Research, User Interviews.</p>
+                        </div>
+                        <div class="textright">
+                            <p>Tools that I use: Adobe Creative Cloud, Figma, Sketch, Adobe XD, Framer, Invision, Miro, HTML, CSS, JavaScript, and Github. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="max-width">
+                <h2 class="title">Contact me</h2>
+                <div class="contact-content">
+                    <div class="text">Get in Touch</div>
+                    <p>......</p>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head">Name</div>
+                                <div class="sub-title">Jeffrey Wang</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info">
+                                <div class="head">Address</div>
+                                <div class="sub-title">Tempe, Arizona</div>
+                            </div>
+                        </div> <div class="row">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">wangjeffreyd@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             <div>
-                <p>Who am I? Hello,</p>
-                <p>I am a motivated UX/UI Design professional and problem solver with a background in Media Studies and UX/UI Design. Experience with verbal and written communication, strong team skills, and leadership. Recently earned a Certificate in UX/UI Design from the University of Arizona.</p>
-            
-            </div>
-            
         </section>
-        <section id="cards">
-            <!----Fetch-->
-            <div class="fetch">
-                <img src="images/fetch_hi-fi-prototype.png" alt="prototype">
+        <script src="script.js"></script>
+        </div>
+     
 
-            </div>
-
-
-
-
-        </section>
-        <footer id="footer">
-            <div class="footermenu">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Work</li>
-                    <li>Contact</li>
-                </ul>
-            </div>
-            <div class="socials">
-                <a href="https://www.linkedin.com/in/jeffreydwang/">
-                    <img src="images/linkedin.svg" alt="LinkedIn">
-                </a>
-                <a href="https://www.instagram.com/hefetheboss/">
-                    <img src="images/instagram.svg" alt="Instagram">
-                </a>
-            </div>
-
-
-
-
-
-
-
-
-
+    </main>
+    
+        <footer>
+            <span>Created By <a href="#">Jeffrey Wang</a>   | <span class="far fa-copyright"> 2021 All rights reserved.</span></span>
+           
 
         </footer>
 
