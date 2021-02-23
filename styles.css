@@ -4,6 +4,11 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+@media all and (max-width: 600){
+    body {
+     
+    }
+}
 
 /*Navbar Section*/
 
@@ -14,7 +19,7 @@
     z-index: 999;
     padding: 30px 0;
     list-style: none;
-    font-family: 'Playfair Display';
+    font-family: 'Playfair Display', sans-serif;
     transition: all 0.3s ease;
 }
 
@@ -55,16 +60,34 @@
     font-weight: 500;
     margin-left: 25px;
 }
+/* Menu Button Styling*/
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+}
 
 /*Home Section*/
 
 .home {
-display: flex;
-height: 100vh;
-font-family: 'Playfair Display';
-min-height: 500px;
-color: #fff;
-background: black;
+    display: flex;
+    background: url(images/peter-olexa-Q5GnQxjX7Jk-unsplash.jpg) left no-repeat;
+    background-size: 135%;
+    height: 100vh;
+    font-family: 'Playfair Display', sans-serif;
+    min-height: 500px;
+    color: #fff;
+
 }
  
 .home .max-width {
@@ -95,23 +118,25 @@ background: black;
 section{
     padding: 100px 0;
 }
-.about, .skills, .contact, .footer{
-    font-family: 'Playfair Display';
+.about, .work, .skills, .contact, .footer{
+    font-family: 'Playfair Display', sans-serif;
 }
 
-/*About Section*/
-
-.about .title {
+/*Works Section*/
+.work {
+    background:#FFF;
+}
+.work .title {
     position: relative;
     text-align: center;
     font-size: 40px;
     font-weight: 500;
     margin-bottom: 60px;
     padding-bottom: 20px ;
-    font-family: 'Playfair Display';
+    font-family: 'Playfair Display', sans-serif;
+    color: black;
 }
-.about .title::before{
-    content: "";
+.work .title::before{
     position: absolute;
     bottom: 0px;
     left: 50%;
@@ -120,8 +145,7 @@ section{
     background: #111;
     transform: translateX(-50%);
 }
-.about .title::after{
-    content: "who i am";
+.work .title::after{
     position: absolute;
     bottom: -14px;
     left: 50%;
@@ -131,56 +155,48 @@ section{
     background: #fff;
     transform: translateX(-50%);
 }
-.about .about-content{
+.work .work-cards {
+    color: black;
+    text-align: center;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
 }
 
-.about .about-content .left{
-    width: 45%;
+.work .work-cards img{
+    border-radius: 25px;
+    transition: all 0.3s ease;
 }
-.about .about-content .left img{
-    height: 400px;
-    width: 400px;
-    object-fit: cover;
-    border-radius: 6px;
+.work .work-cards img:hover{
+    transform: scale(1.1);
 }
-.about .about-content .right{
-    width: 55%;
-}
-.about .about-content .right .text{
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
+.work .work-cards h3{
+    padding: 20px;
+    font-size: 30px;
+    text-decoration: underline;
 
-.about .about-content .right .text .ux{
-    color: crimson;
 }
-
-.about .about-content .right{
-    text-align: justify;
+.work .work-cards h4{
+    padding: 20px;
 }
-
-.about .about-content .right a{
+.work .work-content .work-cards a{
     display: inline-block;
     background: crimson;
-    color: #fff;
+    color:black;
     font-size: 20px;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
     border: 2px solid crimson;
 }
-
-.about .about-content .right a:hover{
+.work .work-content .work-cards a:hover {
     color: crimson;
     background: none;
 }
 
 /*Skills Section*/
+.skills{
+    background: #D4DDE3;
+}
 
 .skills .title {
     position: relative;
@@ -189,7 +205,7 @@ section{
     font-weight: 500;
     margin-bottom: 60px;
     padding-bottom: 20px ;
-    font-family: 'Playfair Display';
+    font-family: 'Playfair Display', sans-serif;
 }
 .skills .title::before{
     content: "";
@@ -230,16 +246,112 @@ section{
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
+    align-self: start;
+}
+.skills .skills-content .column .textleft h3{
+    text-decoration: underline;
+}
+.skills .skills-content .column .textleft ul {
+    list-style: none;
+}
+.skills .skills-content .column .textright{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    align-self: start;
+}
+.skills .skills-content .column .textright h3{
+    text-decoration: underline;
+}
+.skills .skills-content .column .textright ul{
+    list-style: none;
 }
 
-.skills .skills-content .column .textright{
+/*About Section*/
+
+.about .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px ;
+    font-family: 'Playfair Display', sans-serif;
+}
+.about .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+.about .title::after{
+    content: "who i am";
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+.about .about-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: fill;
+    border-radius: 50px;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-/*Contact Section*/
+.about .about-content .right .text .ux{
+    color: crimson;
+}
 
+.about .about-content .right{
+    text-align: justify;
+}
+
+.about .about-content .right a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+}
+
+.about .about-content .right a:hover{
+    color: crimson;
+    background: none;
+}
+
+/*Contact Section*/
+.contact {
+    background: #D4DDE3;
+}
 .contact .title {
     position: relative;
     text-align: center;
@@ -247,7 +359,7 @@ section{
     font-weight: 500;
     margin-bottom: 60px;
     padding-bottom: 20px ;
-    font-family: 'Playfair Display';
+    font-family: 'Playfair Display', sans-serif;
 }
 
 .contact .title::before{
@@ -268,7 +380,7 @@ section{
     font-size: 20px;
     color: crimson;
     padding: 5px;
-    background: #fff;
+    background: #D4DDE3;
     transform: translateX(-50%);
 }
 
@@ -278,7 +390,7 @@ section{
 .contact .contact-content .text{
     font-size: 20px;
     font-weight: 600;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 .contact .contact-content .left p{
     text-align: justify;
@@ -293,11 +405,38 @@ section{
     height: 65px;
     align-items: center;
 }
-
 .contact .contact-content .row .info{
     margin-left: 30px;
 }
-
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: crimson;
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+    color: #333;
+}
+.contact .contact-content .socials{
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
 /*Footer Section*/
 
 footer{
@@ -312,3 +451,4 @@ footer span a{
 footer span a:hover{
     text-decoration: underline;
 }
+ 
